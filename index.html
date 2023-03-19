@@ -1,0 +1,213 @@
+<html>
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<meta http-equiv="Cache-Control" content="no-cache" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>math</title>
+
+<style type="text/css">
+
+/*reset*/
+
+form,p,div,input{
+
+	padding: 0;
+
+	margin: 0;
+
+}
+
+<comment>
+
+ul,li {
+
+	list-style: none;
+
+}
+
+</comment>
+
+img {
+
+	border: none
+
+}
+
+a {
+
+	color: #07519a;
+
+	text-decoration: none;
+
+}
+
+form {
+
+	background: none;
+
+}
+
+.recommend {
+
+	background: #EBEBEB;
+
+	overflow: hidden;
+
+	margin: 0px 0 0px 0;
+
+	width: 100%;
+
+	text-align: center
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+function startTime()
+
+{
+
+var today=new Date();
+
+var h=today.getHours();
+
+var m=today.getMinutes();
+
+var s=today.getSeconds();
+
+// add a zero in front of numbers<10
+
+m=checkTime(m);
+
+s=checkTime(s);
+
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+
+t=setTimeout('startTime()',500);
+
+}
+
+function checkTime(i)
+
+{
+
+if (i<10)
+
+{
+
+i="0" + i;
+
+}
+
+return i;
+
+}
+
+</script>
+
+<script src="https://math-examples.github.io/js/requestUserRepoContent.js"></script>
+
+</head>
+
+<body onload="startTime()">
+
+<!-- Note to anyone copying the HTML for the following counter:
+
+the counter name ("username" on this page) must be unique.
+
+Otherwise different pages will increment the same counter. See
+
+        http://stuff.mit.edu/doc/counter-howto.html. -->
+
+You are visitor number
+
+        <img
+
+width="20" height="20" src="http://stuff.mit.edu/cgi/counter/math-papers.github.io" alt="several">
+
+. Welcome!
+
+<button onclick="downloadAll()">Download All</button>
+
+   
+
+<table summary="Table for page layout." id="tlayout">
+
+<tr valign="top">
+
+    
+
+<td>
+
+<div class="menu-category">Papers</div>
+
+</td>
+
+<td>
+
+<div><a href="https://math-books.github.io/index.html" class="current">Books</a></div>
+
+</td>
+
+<td>
+
+<div><a href="#Links" class="current">Links</a></div>
+
+</td>
+
+<td id="layout-content">
+
+</td>
+
+</tr>
+
+</table>
+
+<h3 align="center">Math Papers</h3>
+
+<ol id="userReposContent" reversed></ol>
+
+<h3 id="Links" align="center">Links</h3>
+
+<ol>
+
+    <li>
+
+       <a href="https://shuangli01.github.io/">Decision Making</a> 
+
+    </li>
+
+    <li>
+
+       <a href="https://tminka.github.io/">Bayesian Inference</a> 
+
+    </li>
+
+</ol>
+
+
+<script>
+
+//requestUserRepos('math-papers');
+requestUserRepoContentReverse('math-papers', 2022);
+
+function downloadAll() {
+downloadUserRepo('math-papers', 2022);
+}
+
+</script>
+
+    
+
+	
+
+</body>
+
+</html>
